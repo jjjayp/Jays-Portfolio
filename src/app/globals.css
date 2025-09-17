@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Subtle checker/grid overlay for depth (optional) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(transparent 0, transparent 2px, rgba(255,255,255,0.02) 2px),
+    radial-gradient(transparent 0, transparent 2px, rgba(255,255,255,0.02) 2px);
+  background-size: 32px 32px, 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
